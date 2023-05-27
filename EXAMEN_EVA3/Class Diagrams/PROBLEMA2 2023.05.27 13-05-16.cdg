@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="PROBLEMA2">
+  <ClassDiagramComponents>
+    <Class name="Inventario" package="PROBLEMA2" visibility="public" xPosition="26.0" yPosition="146.0">
+      <Fields>
+        <Field name="arrProducto" type="Producto[]" visibility="private"/>
+        <Field name="elementosExistentes" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addProduct" returnType="void" visibility="public">
+          <Argument type="Producto" name="producto"/>
+        </Method>
+        <Method name="removeProduct" returnType="void" visibility="public">
+          <Argument type="int" name="productId"/>
+        </Method>
+        <Method name="searchProduct" returnType="Producto" visibility="public">
+          <Argument type="int" name="productId"/>
+        </Method>
+        <Method name="displayInventory" returnType="void" visibility="public"/>
+        <Method name="saveToFile" returnType="void" visibility="public">
+          <Argument type="String" name="filename"/>
+        </Method>
+        <Method name="loadFromFile" returnType="void" visibility="public">
+          <Argument type="String" name="filename"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Producto" package="PROBLEMA2" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="precio" type="double" visibility="private"/>
+        <Field name="cantidad" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="double" name="precio"/>
+          <Argument type="int" name="cantidad"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getPrecio" returnType="double" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="getCantidad" returnType="int" visibility="public"/>
+        <Method name="setCantidad" returnType="void" visibility="public">
+          <Argument type="int" name="cantidad"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="PROBLEMA2.Inventario" target="PROBLEMA2.Producto" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="examen_3era_evaluacion_eclair">
+  <ClassDiagramComponents>
+    <Class name="EXAMEN_3ERA_EVALUACION_ECLAIR" package="examen_3era_evaluacion_eclair" visibility="public" xPosition="76.0" yPosition="36.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

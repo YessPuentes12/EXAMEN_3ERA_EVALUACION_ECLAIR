@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="PROBLEMA1">
+  <ClassDiagramComponents>
+    <Class name="Estudiante" package="PROBLEMA1" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="NoLista" type="int" visibility="private"/>
+        <Field name="grado" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="NoLista"/>
+          <Argument type="String" name="grado"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getNoLista" returnType="int" visibility="public"/>
+        <Method name="setNoLista" returnType="void" visibility="public">
+          <Argument type="int" name="NoLista"/>
+        </Method>
+        <Method name="getGrado" returnType="String" visibility="public"/>
+        <Method name="setGrado" returnType="void" visibility="public">
+          <Argument type="String" name="grado"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="StudentManagementSystem" package="PROBLEMA1" visibility="public" xPosition="402.0" yPosition="58.0">
+      <Fields>
+        <Field name="estudiantes" type="List&lt;Estudiante&gt;" visibility="private"/>
+        <Field name="student" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="addStudent" returnType="void" visibility="public">
+          <Argument type="Estudiante" name="estudiante"/>
+        </Method>
+        <Method name="getStudent" returnType="Estudiante" visibility="public">
+          <Argument type="int" name="rollNumber"/>
+        </Method>
+        <Method name="storeData" returnType="void" visibility="public">
+          <Argument type="String" name="filename"/>
+        </Method>
+        <Method name="loadData" returnType="void" visibility="public">
+          <Argument type="String" name="filename"/>
+        </Method>
+        <Method name="printStudentList" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="estudiantes" source="PROBLEMA1.StudentManagementSystem" target="PROBLEMA1.Estudiante" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Estudiante&gt;"/>
+    <UseRelation source="PROBLEMA1.StudentManagementSystem" target="PROBLEMA1.Estudiante" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
